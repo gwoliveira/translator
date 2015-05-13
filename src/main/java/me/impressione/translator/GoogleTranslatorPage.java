@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class GoogleTranslatorPage {
 	public enum Language{
-		pt,en;
+		pt,en,es;
 	}
 	
 	@FindBy(id = "source")
