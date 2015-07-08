@@ -43,6 +43,6 @@ public class GoogleTranslatorPageTest {
 		assertThat(translatorPage.translate("casa"), equalTo("home"));
 		assertThat(translatorPage.translate("escola"), equalTo("school"));
 		assertThat(translatorPage.translate("puteiro"), equalTo("whorehouse"));
-		assertThat(translatorPage.translate("trapaça"), equalTo("cheating"));
+		assertThat(translatorPage.translate("trapaça"), equalTo("trickery"));
 	}
 }
