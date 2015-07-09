@@ -11,8 +11,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class GoogleTranslatorPageTest {
 	protected static WebDriver driver;
@@ -20,9 +19,7 @@ public class GoogleTranslatorPageTest {
 
 	@BeforeClass
 	public static void onlyOnce() {
-		FirefoxProfile profile = new FirefoxProfile();
-		profile.setPreference("javascript.enabled", false);
-		driver = new FirefoxDriver(profile);
+		driver = new HtmlUnitDriver() ;
 	}
 
 	@Before
