@@ -1,7 +1,7 @@
 package me.impressione.translator;
 
 import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -9,7 +9,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class GoogleTranslatorJavaScriptPageTest {
 
@@ -18,7 +18,7 @@ public class GoogleTranslatorJavaScriptPageTest {
 
 	@BeforeClass
 	public static void onlyOnce() {
-		driver = new HtmlUnitDriver(true);
+		driver = new FirefoxDriver();
 	}
 
 	@Before

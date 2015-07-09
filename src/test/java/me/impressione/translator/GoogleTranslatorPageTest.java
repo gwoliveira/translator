@@ -1,8 +1,9 @@
 package me.impressione.translator;
 
+import static me.impressione.translator.GoogleTranslatorPage.Language.en;
+import static me.impressione.translator.GoogleTranslatorPage.Language.pt;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
-import static me.impressione.translator.GoogleTranslatorPage.Language.*;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -10,7 +11,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 
 public class GoogleTranslatorPageTest {
 	protected static WebDriver driver;
@@ -18,7 +20,9 @@ public class GoogleTranslatorPageTest {
 
 	@BeforeClass
 	public static void onlyOnce() {
-		driver = new HtmlUnitDriver();
+		FirefoxProfile profile = new FirefoxProfile();
+		profile.setPreference("javascript.enabled", false);
+		driver = new FirefoxDriver(profile);
 	}
 
 	@Before
